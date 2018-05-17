@@ -36,7 +36,7 @@ p.connect = function(uri, onConnect, onError){
 				},
 				lastSeen: 0,
 				IP: "0.0.0.0",
-				id: 0
+				id: 3
 			};
 			
 			var query = {'id':data.id};

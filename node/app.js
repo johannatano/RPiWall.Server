@@ -11,7 +11,7 @@ app.set('port', (process.env.PORT || 5000))
 
 var db = new MongooseDB();
 
-var uristring = process.env.MONGODB_URI || 'mongodb://johanna:annahoj@ds159963.mlab.com:59963/heroku_jm3b1q8n'
+var uristring = 'mongodb://localhost/db'
 db.connect(uristring, onDBConnect, onDBError);
 
 /* SOCKET SERVER SETUP */
@@ -95,7 +95,9 @@ function onSocketUpdate(type, data){
 
         db.setTile(data[i], function(success){
           console.log('Tile successfuly updated');
-        }, function(err){});
+        }, function(err){
+          console.log(err);
+        });
 
         console.log('changed:tile_data:' + id + ':settings')
         socketServer.emit('changed:tile_data:' + id + ':settings', data[i])
@@ -105,10 +107,16 @@ function onSocketUpdate(type, data){
 
       case "set:tile_data:status":
 
+
+      console.log('PI STATUS', data);
       for(var i = 0; i < data.length; i++){
         data[i].lastSeen = new Date().getTime()/1000;
           db.setTile(data[i], function(success){
-          }, function(err){});
+            // console.log(success, 'success');
+          }, function(err){
+            console.log(err);
+            // console.log('err');
+          });
         }
         default:
       }

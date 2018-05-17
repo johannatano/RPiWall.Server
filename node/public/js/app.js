@@ -112,6 +112,8 @@ p.onConnected = function(){
 		$('#dashboard .IP').addClass('error');
 		var tileDom;
 
+
+		
 		data.sort(function(a, b){
 			return a.id - b.id;
 		});
@@ -121,6 +123,12 @@ p.onConnected = function(){
 
 		for(var i in data){
 			var id = data[i].id;
+
+
+
+			if(data[i].IP == '192.168.31.185'){
+				console.log(data[i].lastSeen);
+			}
 			// console.log(data[i]);
 			var tileDom = $('#dashboard .tiles .tile-' + id);
 			if(!tileDom.get(0)){
