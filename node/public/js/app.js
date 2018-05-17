@@ -5,7 +5,7 @@ var App = function(){
 var s = App;
 var p = s.prototype;
 
-var socket = io('http://localhost:3000');
+var socket = io('http://rpimaster.local:3000');
 // var socket = io('https://nelly-party.herokuapp.com:3000');
 var tiles = [];
 
