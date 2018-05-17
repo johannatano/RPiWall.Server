@@ -1,0 +1,70 @@
+body,html{
+	background: #efefef;
+	font-family: Arial;
+}
+
+.indicator{
+	position: relative;
+	display: inline-block;
+}
+
+
+.indicator:after{
+	display: block;
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	margin-top: -5px;
+	content: ' ';
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+}
+
+.indicator:after{
+	background: yellow;
+}
+
+.indicator.error:after{
+	background: red;
+}
+
+.indicator.ok:after{
+	background: green;
+}
+
+.status{
+	padding: 20px;
+	margin: 20px;
+}
+
+.tile{
+	padding: 20px;
+	background: white;
+	margin: 20px 0;
+	position: relative;
+}
+
+
+.tile .time{
+	font-size: 9px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	/*text-transform: uppercase;*/
+}
+
+.tile .IP{
+	font-weight: bold;
+	/*text-transform: uppercase;*/
+}
+
+
+.id{
+	font-weight: bold;
+}
+
+
+.hidden{
+	display: none;
+}

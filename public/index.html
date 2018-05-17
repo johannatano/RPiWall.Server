@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Control Panel</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+      <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+      <script src="js/lib/jquery-2.1.0.min.js"></script>
+      <script src="js/lib/socket.io.min.js"></script>
+      <script src="js/app.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+
+  <div id="dashboard" class="status">
+      <h1>TV Wall Control Panel</h1>
+
+      <div class="bulk-actions">
+        <div class="reboot btn btn-danger">Reboot</div>
+        <div class="restart-app btn btn-warning">Restart app</div>
+        <div class="update-source btn btn-info">Update source</div>
+        <div class="restart-playback btn btn-success">Restart playback</div>
+      </div>
+
+      <p class="connection-status indicator">Connecting</p>
+      <div class="tiles">
+      </div>
+    </div>
+
+</body>
+</html>
